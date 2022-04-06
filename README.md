@@ -167,6 +167,8 @@ Operates the way as a [Copy Section](#copy-section). Unfortunately due to its in
 ### Call to Action Image
 Container with only a single `<img>` tag. Only one image tag should ever go in this editor.
 
+It's recommended to use an image with width equal or greater than the height (with a center-center focal point). The sides will be cropped out to fit the container.
+
 ## Card Section
 Contains two editable cards with special rules:
 
