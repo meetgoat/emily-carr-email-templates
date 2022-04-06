@@ -160,4 +160,11 @@ Contains two editable cards with special rules:
 You can edit few styles on the __Edit Design__ view.
 
 ## Call to Action Colour
+Allows you to change the Call to Action colour. 
+
+Can be a hex value e.g. `#FFFFFF`, or an CSS-valid text value e.g. `red`
+
 ## Header Colour
+Allows you to change the Header colour.
+
+Can be a hex value e.g. `#FFFFFF`, or an CSS-valid text value e.g. `red`
