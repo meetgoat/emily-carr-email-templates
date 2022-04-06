@@ -22,6 +22,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
 
 	{% include '_css/_css.twig' %}
+
 </head>
 
 <body>
@@ -97,7 +98,7 @@
                         <tr height="32px" style="display:block;background:white;"></tr>
                         <tr>
                             <td valign="top" id="templateBody">
-                            	<div>{% block content %}{% endblock %}</div>
+                            	<div>{% apply spaceless %}{% block content %}This is where your email body goes.{% endblock %}{% endapply %}</div>
                             </td>
                         </tr>
                         <!-- // END BODY -->

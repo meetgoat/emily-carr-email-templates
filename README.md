@@ -12,6 +12,22 @@ Email Templates (Require Login).
 
 If you're only editing the template, you won't need to reference the template language, only the template merge tags.
 
+# Development
+
+This templating system uses the [Twig](https://twig.symfony.com/) template engine. To use this repository, follow these steps:
+
+1. `git clone` this repository
+2. Create and edit your templates as direct children in the `templates` directory.
+3. Run `php index.php` to generate your templates.
+
+You should now see your rendered templates in the `dist` folder. Copy and paste these templates into Mailchimp for usage.
+
+## Planned Features
+
+- Webpack + Browsersync
+- SCSS implementation
+- Asset Compilation + Minification
+
 # General Tips
 For general use, the content editor should work for content. However with all WYSIWYG (what-you-see-is-what-you-get) editors, inconsistencies arise when using features like backspaces and style tags (mostly due to the fact that users enter content differently).
 
@@ -51,8 +67,6 @@ However, a few sections with specific design and/or vertical image alignment req
 
 ## Email Template 3
 - [Header](#header)
-- [Heading](#heading)
-- [Subheading](#subheading)
 - [Copy Section](#copy-section) (1)
 - [Card Section](#card-section)
 - [Copy Section](#copy-section) (2)
