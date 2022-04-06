@@ -1,8 +1,9 @@
 # Overview
-This template is built using the Mailchimp template syntax. 
+This template is built using the Mailchimp template syntax and the Twig template engine to assemble the HTML files.
 
-- [Template Language](https://templates.mailchimp.com/getting-started/template-language/)
-- [Template Merge Tags](https://mailchimp.com/help/all-the-merge-tags-cheat-sheet/)
+- [MailChimp Template Language](https://templates.mailchimp.com/getting-started/template-language/)
+- [MailChimp Merge Tags](https://mailchimp.com/help/all-the-merge-tags-cheat-sheet/)
+- [Twig Template Language](https://twig.symfony.com/)
 
 Email Templates (Require Login).
 
@@ -10,15 +11,16 @@ Email Templates (Require Login).
 - [ECU - Email Template 2](https://us20.admin.mailchimp.com/templates/edit?id=10000167)
 - [ECU - Email Template 3](https://us20.admin.mailchimp.com/templates/edit?id=10000171)
 
-If you're only editing the template, you won't need to reference the template language, only the template merge tags.
+If you're only editing the template, you won't need to reference any of the template languages, only the MailChimp template merge tags.
 
 # Development
 
-This templating system uses the [Twig](https://twig.symfony.com/) template engine. To use this repository, follow these steps:
+This development template system uses the [Twig](https://twig.symfony.com/) template engine. To use this repository, follow these steps:
 
-1. `git clone` this repository
-2. Create and edit your templates as direct children in the `templates` directory.
-3. Run `php index.php` to generate your templates.
+1. Install this repository with `git clone`
+2. Run `composer install`
+2. Create and edit your templates in the `templates` directory
+3. Run `php index.php` in your template directory to generate your HTML templates.
 
 You should now see your rendered templates in the `dist` folder. Copy and paste these templates into Mailchimp for usage.
 
@@ -29,19 +31,19 @@ You should now see your rendered templates in the `dist` folder. Copy and paste 
 - Asset Compilation + Minification
 
 # General Tips
-For general use, the content editor should work for content. However with all WYSIWYG (what-you-see-is-what-you-get) editors, inconsistencies arise when using features like backspaces and style tags (mostly due to the fact that users enter content differently).
+For general use, the content editor should work for everything. However with all WYSIWYG (what-you-see-is-what-you-get) editors, inconsistencies arise when using features like backspaces and style tags (mostly due to the fact that users enter content differently).
 
-To achieve the most consistent styling, we recommend to use the HTML view (by clicking the `<>` button) when using the editor. It may seem more difficult at first, but it allows for more precise control and functionality across browsers.
+To achieve the most consistent styling, we recommend to use the HTML view (by clicking the `<>` button) when using the Mailchimp editor. It may seem more difficult at first, but it allows for more precise control and functionality across browsers.
 
 All sample code and instructions in this README will assume usage of the HTML view as well.
 
 
 # Editing
-Hovering over elements in __Edit Design__ mode will allow you to see how sections and components are defined. Most of the editable elements are hideable by default (represented by the eye icon). Note that you won't be actually be able to hide these areas until you create a campaign that uses this template.
+Hovering over elements in __Edit Design__ mode will allow you to see how sections and components are defined. Most of the editable elements are hideable by default (represented by an eye icon). Note that you won't be actually be able to hide these areas until you create a campaign that uses the template.
 
-Most longform content can be edited in one section, so formats are reproducible by copying and pasting the predefined content.
+Most longform content can be edited in one section, but some sections are separated for ease of use. Most formats are also reproducible by copying and pasting the predefined content.
 
-However, a few sections with specific design and/or vertical image alignment require more complex HTML, and might require a bit more instruction to adjust. We'll go over those components here.
+However, a few sections require more complex HTML, and might require a bit more instruction to adjust. Below are instructions for all the predefined sections.
 
 # Template Structure
 
@@ -157,12 +159,13 @@ A specially formatted copy section with special rules:
 This section is also repeatable for ease-of-use.
 
 ## Call to Action
+Call to Action composed of two smaller components for text and images. Hideable.
 
 ### Call to Action Text
-Operates the way as a [Copy Section](#copy-section). Unfortunately due to some of the inherited styles it's difficult to edit this copy from the default editor due to it's white colour.
+Operates the way as a [Copy Section](#copy-section). Unfortunately due to its inherited styles it iss difficult to edit this copy from the default editor. Recommended to edit through the HTML view.
 
 ### Call to Action Image
-HTML container with only a single `<img>` tag. Only one image tag should ever go in this editor.
+Container with only a single `<img>` tag. Only one image tag should ever go in this editor.
 
 ## Card Section
 Contains two editable cards with special rules:
