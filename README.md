@@ -1,16 +1,16 @@
 # Overview
-This template is built using the Mailchimp template syntax and the Twig template engine to assemble the HTML files.
+This template is built using the Mailchimp template syntax and the Twig template engine.
 
 - [MailChimp Template Language](https://templates.mailchimp.com/getting-started/template-language/)
 - [MailChimp Merge Tags](https://mailchimp.com/help/all-the-merge-tags-cheat-sheet/)
 - [Twig Template Language](https://twig.symfony.com/)
 
-Required Software (For Development) (MacOS)
+## Required Software (For Development) (MacOS)
 
 - [PHP](https://www.php.net/) - [Installation Instructions](https://www.php.net/manual/en/install.macosx.php)
 - [Composer](https://getcomposer.org/download/) - [Installation Instructions](https://getcomposer.org/doc/00-intro.md#globally)
 
-Email Templates (Require Login).
+## Email Templates (Require Login)
 
 - [ECU - Email Template 1](https://us20.admin.mailchimp.com/templates/edit?id=10000159)
 - [ECU - Email Template 2](https://us20.admin.mailchimp.com/templates/edit?id=10000167)
@@ -24,9 +24,9 @@ All editing can happen within the Mailchimp dashboard, but it comes with a few d
 
 - CSS changes won't apply across templates. That means you will have to copy and paste your changes across templates if you want consistency.
 - CSS is difficult to edit within the editor. It needs to be uncompiled for Mailchimp to implement it, which means you have a very long block of code to scan through.
-- You can't autoprefix your code or manage it easily without extensive knowledge of CSS.
+- You can't autoprefix your code or manage it easily.
 
-It's __highly__ recommended to process your templates through PHP to not only save time but make sure your CSS meets coding standards. I've tried to write this guide out so a non-developer can generate email templates, but feel free to contact us at [developers@meetgoat.com](mailto:developers@meetgoat.com) if things are unclear.
+It's __highly__ recommended to process your templates through PHP not only save time but to make sure your CSS meets coding standards. I've tried to write this guide out so a non-developer can generate email templates, but feel free to contact us at [developers@meetgoat.com](mailto:developers@meetgoat.com) if things are unclear.
 
 <!-- This development template system uses the [Twig](https://twig.symfony.com/) template engine. To use this repository, follow these steps: -->
 1. Make sure you have `php` and `composer` installed.
@@ -34,7 +34,7 @@ It's __highly__ recommended to process your templates through PHP to not only sa
 3. `cd` into your installed directory. 
 4. Run `composer install`
 5. Create and edit your templates in the `templates` directory
-6. Edit your `.scss` files. This will compile into `.css` for your final template. You can get a brief overview of the syntax [here](https://sass-lang.com/guide)
+6. Edit your `.scss` files. This will compile into `.css` for your final template. [Syntax overview here](https://sass-lang.com/guide)
 7. Run `php index.php` in your template directory to generate your HTML templates.
 
 You should now see your rendered templates in the `dist` folder. Copy and paste these templates into Mailchimp for usage.
@@ -44,7 +44,10 @@ You should now see your rendered templates in the `dist` folder. Copy and paste 
 - Webpack + Browsersync
 - Autoprefixing w/ Comments Enabled
 
-# General Tips
+
+<hr>
+
+# Visual Editor
 After copy and pasting your generated HTML into MailChimp, the visual editor should work for most content. However with all WYSIWYG (what-you-see-is-what-you-get) editors, inconsistencies arise when using features like backspaces and style tags are applied (mostly due to the fact that users enter content differently).
 
 To achieve the most consistent styling, we recommend to use the HTML view (by clicking the `<>` button) when using the MailChimp editor. It may seem more difficult at first, but it allows for more precise control and functionality across browsers.
