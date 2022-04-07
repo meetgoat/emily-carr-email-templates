@@ -27,8 +27,7 @@ You should now see your rendered templates in the `dist` folder. Copy and paste 
 ## Planned Features
 
 - Webpack + Browsersync
-- SCSS implementation
-- Asset Compilation + Minification
+- Autoprefixing w/ Comments Enabled
 
 # General Tips
 For general use, the content editor should work for everything. However with all WYSIWYG (what-you-see-is-what-you-get) editors, inconsistencies arise when using features like backspaces and style tags (mostly due to the fact that users enter content differently).
@@ -107,6 +106,8 @@ Insert an image into the content. Images must be uploaded first using Mailchimp'
 Must be used within an `<p>` tag if highlighting/underlining text, otherwise can be used standalone if the `class="button"` attribute is used.
 #### Attribute `class="button"`
 Usage would look like `<a class="subheading">Your Text Here</a>` Used to create a button-styled link.
+#### Attribute `class="arrow"`
+Usage would look like `<a class="arrow">Your Text Here</a>` Used to create a link with an arrow.
 
 ### List (Ordered) - `<ol>`
 Numbered list. Direct children must be `<li>` tags. However, the children `<li>` tags can include `<p>`, `<br>`, and `<span>` tags to achieve various styles. See [here](#list-special-usage) for an example of special usage.

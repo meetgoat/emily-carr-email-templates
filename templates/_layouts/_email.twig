@@ -1,6 +1,5 @@
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
-
 <head>
     <!-- This is a simple example template that you can edit to create your own custom templates -->
 
@@ -21,8 +20,9 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
 
-	{% include '_css/_css.twig' %}
-
+	<style>
+{{ source('_css/main.css')|indent(8) }}
+	</style>
 </head>
 
 <body>
